@@ -10,7 +10,28 @@
         {% extends "energy/base.html" %}
         {% block content %}
         <h1>Energy Records</h1>
-        <p>View your factory electricity consumption records.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Factory Name</th>
+                    <th>Consumption (Kwh)</th>
+                    <th>Recorded Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.factory_name }}</td>
+                    <td>{{ record.consumption_kwh }}</td>
+                    <td>{{ record.recorded_date }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">No energy records found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
         {% endblock %}
     </escape>
     
