@@ -10,9 +10,7 @@ def energy_dashboard(request):
     return render(request, "energy/dashboard.html", data)
 
 def energy_records(request):
-    return HttpResponse(
-        "Here you see the Energy records,"
-    )
+    return render (request, "energy/records.html")
 
 def add_energy(request):
     return HttpResponse(
@@ -20,8 +18,6 @@ def add_energy(request):
     )
 
 def energy_reports(request):
-    return HttpResponse(
-        "Energy Reports"
-    )
+    return render(request, "energy/reports.html")
 
 

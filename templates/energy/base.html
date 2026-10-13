@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ESG Energy Tracking</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'energy/css/style.css' %}">
 
   </head>
   <body>
-    <h1>ESG Energy Tracking</h1>
+    <header>
+    <h1>Sustainability Platform</h1>
     <nav>
-      <a href="{% url 'energy:dashboard' %}">Dashboard</a>
-      <a href="{% url 'energy:records' %}">Records</a>
-      <a href="{% url 'energy:add' %}">Add Energy</a>
+      <a href="{% url 'energy:dashboard' %}">Dashboard</a> |
+      <a href="{% url 'energy:records' %}">Records</a> |
+      <a href="{% url 'energy:add' %}">Add Energy</a> |
       <a href="{% url 'energy:reports' %}">Reports</a>
     </nav>
+    </header>
+    <main>
     {% block content %}
     {% endblock %}
-    
+    </main>
+    <footer>
+      <p>ESG Energy Tracking System</p>
+    </footer>
   </body>
 </html>

@@ -6,8 +6,10 @@
     <title>Energy Dashboard</title>
 </head>
 <body>
-    <h1>Energy Dashboard</h1>
-    <p>Electricity Consumption: {{ consumption }} Kwh</p>
-    
+    <escape>{%extends "energy/base.html" %}
+        {% block content %}
+        <h1>Energy Dashboard</h1>
+        <p>Electricity Consumption: {{ consumption }} Kwh</p>
+        {% endblock %}</escape>
 </body>
 </html>
