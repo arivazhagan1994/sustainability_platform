@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.shortcuts import render
 from .models import EnergyRecord
+from .views import EnergyRecordForm
 
 def energy_dashboard(request):
     data = {
@@ -15,8 +16,12 @@ def energy_records(request):
     return render (request, "energy/records.html",{"records":records})
 
 def add_energy(request):
-    return HttpResponse(
-        "Add a New Energy data here!"
+    form = EnergyRecordForm()
+
+    return render(
+        request,
+        "energy/add_energy.html",
+        {"form":form}
     )
 
 def energy_reports(request):

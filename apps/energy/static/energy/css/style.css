@@ -24,3 +24,41 @@ main {
     margin-top: 20px;
     border-radius: 8px;
 }
+
+
+/* Energy Records Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+/* Table Header */
+thead {
+    background-color: #2459a9;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #dbe2ea;
+}
+
+/* Alternate Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+/* Mouse Hover Effect */
+tbody tr:hover {
+    background-color: #dbeafe;
+}
+
+/* Table Header Text */
+th {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
